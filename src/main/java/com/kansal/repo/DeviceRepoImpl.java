@@ -21,7 +21,7 @@ public class DeviceRepoImpl implements DeviceRepoCustom {
 
     @Override
     public DeviceEntity findAndSave(String userId, String guid) {
-        Query query = entityManager.createNativeQuery("SELECT * DEVICE_MASTER " +
+        Query query = entityManager.createNativeQuery("SELECT * FROM DEVICE_MASTER " +
                 "where user_id IS NULL " +
                 "and guid IS NULL " +
                 "LIMIT 1 FOR UPDATE", DeviceEntity.class);
